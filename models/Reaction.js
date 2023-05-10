@@ -21,7 +21,7 @@ const reactionSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now,
-            get: timestap =>  new Date(timestamp).toLocaleDateString()
+            get: timestamp =>  new Date(timestamp).toLocaleDateString()
         },
     },
     {
@@ -33,4 +33,4 @@ const reactionSchema = new Schema(
 );
 
 // exporting the Schema only according to readme specs
-module.exports = reactionSchema
+module.exports = reactionSchema;
