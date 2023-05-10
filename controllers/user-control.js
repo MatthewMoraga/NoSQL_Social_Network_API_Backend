@@ -17,6 +17,8 @@ const UserControl = {
     // getting on user by their id
     getUserById(req, res) {
         User.findById(req.params.userId)
+        .then(userData => res.json(userData))
+        .catch(err => res.status(500).json(err));
     },
     // creating a user
     createUser(req, res) {
