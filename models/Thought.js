@@ -37,7 +37,7 @@ const thoughtSchema = new Schema(
     }
 );
 
-// setting up the virtual property for "reactionCount" which will retrieve the length of the friends array
+// setting up the virtual method for "reactionCount" which will retrieve the length of the friends array
 thoughtSchema.virtual("reactionCount").get(function(){
     return this.reactions.length;
 });
