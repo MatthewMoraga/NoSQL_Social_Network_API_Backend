@@ -11,17 +11,13 @@ const thoughtSchema = new Schema(
             type: String,
             required: true,
             minlength: 1,
-            maxlength: 280
-        }
-    },
-    {
+            maxlength: 280,
+        },
         ceatedAt:{
             type: Date,
             default: Date.now,
             get: timestamp => new Date(timestamp).toLocaleString(),
-        }
-    },
-    {
+        },
         username:{
             type: String,
             required: true,
@@ -33,7 +29,7 @@ const thoughtSchema = new Schema(
             getters: true,
             virtuals: true,
         },
-        id: false,
+        id: false, 
     }
 );
 
@@ -43,6 +39,6 @@ thoughtSchema.virtual("reactionCount").get(function(){
 });
 
 // setting up the Thought model to be used with the Thought collection for exports
-const Thought = model("Thought", thoughtSchema);
+const Thought = model("Thought",thoughtSchema);
 
-module.exports = Thought;
+module.exports = Thought

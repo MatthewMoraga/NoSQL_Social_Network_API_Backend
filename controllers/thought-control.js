@@ -32,6 +32,16 @@ const ThoughtControl = {
     async createThought(req, res) {
         try {
             const thought = await Thought.create(req.body);
+            const user = await User.findOneAndUpdate(
+                req.body.userId,
+                { $push: { thoughts: thought._id } },
+                { new: true}
+            );
+            
+            if (!user){
+                return res.status(500).json({ message: "no user found"});
+            }
+
             res.status(201).json(thought);
         } catch (err) {
             res.status(500).json(err);
@@ -40,7 +50,7 @@ const ThoughtControl = {
     // delete thought handler
     async deleteThought(req, res) {
         try {
-            const thought = await Thought.findByIdAndDelete({_id:req.params.thoughtID});
+            const thought = await Thought.findByIdAndDelete({_id:req.params.thoughtId});
             res.status(200).json(thought);
         } catch (err) {
             res.status(500).json(err);

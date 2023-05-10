@@ -35,7 +35,7 @@ const userSchema = new Schema(
         thoughts:[
             {
                 type: Schema.Types.ObjectId,
-                ref: "Thought"
+                ref: "Thought",
             }
         ],
     },
@@ -45,8 +45,8 @@ const userSchema = new Schema(
         toJSON: {
             virtuals: true,
         },
-            id: false,
-    }
+        id: false,
+}
 );
 
 // setting up the virtual property for "friendcount" which will retrieve the length of the friends array
@@ -54,6 +54,6 @@ userSchema.virtual("friendCount").get(function() {
     return this.friends.length;
 });
 
-const User = model("User", userSchema);
+const User = model("User",userSchema);
 
-module.exports = User;
+module.exports = User
