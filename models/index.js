@@ -1,4 +1,4 @@
-// importing the User and Though models
+// importing the User and Thought models
 const User = require("./User");
 const Thought = require("./thought");
 

@@ -33,4 +33,4 @@ const reactionSchema = new Schema(
 );
 
 // exporting the Schema only according to readme specs
-module.exports.reactionSchema;
+module.exports = reactionSchema;
