@@ -1,7 +1,7 @@
 // importing packages and files
 const express = require("express");
 const db = require("./config/connection");
-// const routes = require("./routes");
+const routes = require("./routes");
 
 // set up the environment variables
 const PORT = process.env.PORT || 3001;
@@ -14,7 +14,7 @@ app.use(express.json());
 
 // import routes
 
-// app.use(routes)
+app.use(routes)
 
 // set up connection to the MongoDB db and server start
 
