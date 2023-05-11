@@ -31,8 +31,11 @@ reactions can be added to thoughts the same way.
 ![](assets\socialAPIBackend_findAllUsers.jpg)
 
 ## Delete User Gif
-Forgot to add this route in the video so i made into a gif in the readme
+### Forgot to add this route in the video so i made into a gif in the readme
 ![Alt text](https://file%2B.vscode-resource.vscode-cdn.net/c%3A/Users/Dragon/Documents/Bootcamp/Homework/module_18_challenge/NoSQL_Social_Network_API_Backend/assets/NoSql%20Social%20Network%20API%20Backend%20Demo%20Delete%20User.gif?version%3D1683764389161)
+
+## video walkthrough if it works
+<iframe src="https://drive.google.com/file/d/14I8sQik8FcjcDPKucImuFdnB8nWasud9/preview" width="640" height="480"></iframe>
 
 ## Contributions
 Matthew Moraga
